@@ -1,0 +1,291 @@
+{
+	"info": {
+		"_postman_id": "7df2dd5b-f1b7-4580-b113-1b2ae0ee8ee2",
+		"name": "unifi",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "13760389"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Signup",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Ahmed Ismail\",\n    \"email\": \"ahmed.ismail@unifi.com\",\n    \"password\": \"admin@123\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{localhost}}/api/user/signup",
+							"host": [
+								"{{localhost}}"
+							],
+							"path": [
+								"api",
+								"user",
+								"signup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"Twila_Denesik@hotmail.com\",\n    \"password\": \"123456\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{localhost}}/api/user/login",
+							"host": [
+								"{{localhost}}"
+							],
+							"path": [
+								"api",
+								"user",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get my info",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDU5NTg3ZjM2ODc1YmQyMmZmZTE4ZjAiLCJuYW1lIjoiQWhtZWQgSXNtYWlsIiwiZW1haWwiOiJhaG1lZC5pc21haWxAdW5pZmkuY29tIiwiaWF0IjoxNjgzNTc4MDYzLCJleHAiOjE2ODM1ODE2NjN9.Ax-fPReYemgxfGcF7pUtIJ3Gv3EHfxCONUeT-md9OQI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{localhost}}/api/user/me",
+							"host": [
+								"{{localhost}}"
+							],
+							"path": [
+								"api",
+								"user",
+								"me"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Todo",
+			"item": [
+				{
+					"name": "Get all todos",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDU5NTg3ZjM2ODc1YmQyMmZmZTE4ZjAiLCJuYW1lIjoiQWhtZWQgSXNtYWlsIiwiZW1haWwiOiJhaG1lZC5pc21haWxAdW5pZmkuY29tIiwiaWF0IjoxNjgzNTc4MDYzLCJleHAiOjE2ODM1ODE2NjN9.Ax-fPReYemgxfGcF7pUtIJ3Gv3EHfxCONUeT-md9OQI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{localhost}}/api/todo",
+							"host": [
+								"{{localhost}}"
+							],
+							"path": [
+								"api",
+								"todo"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get todo by id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDU5NTg3ZjM2ODc1YmQyMmZmZTE4ZjAiLCJuYW1lIjoiQWhtZWQgSXNtYWlsIiwiZW1haWwiOiJhaG1lZC5pc21haWxAdW5pZmkuY29tIiwiaWF0IjoxNjgzNTc4MDYzLCJleHAiOjE2ODM1ODE2NjN9.Ax-fPReYemgxfGcF7pUtIJ3Gv3EHfxCONUeT-md9OQI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{localhost}}/api/todo/:id",
+							"host": [
+								"{{localhost}}"
+							],
+							"path": [
+								"api",
+								"todo",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "64595e8dbeae51880f336085"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete todo",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDU5NTg3ZjM2ODc1YmQyMmZmZTE4ZjAiLCJuYW1lIjoiQWhtZWQgSXNtYWlsIiwiZW1haWwiOiJhaG1lZC5pc21haWxAdW5pZmkuY29tIiwiaWF0IjoxNjgzNTc4MDYzLCJleHAiOjE2ODM1ODE2NjN9.Ax-fPReYemgxfGcF7pUtIJ3Gv3EHfxCONUeT-md9OQI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{localhost}}/api/todo/:id",
+							"host": [
+								"{{localhost}}"
+							],
+							"path": [
+								"api",
+								"todo",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "64595f6e53c95e2acdc793c9"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create todo",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDU5NTg3ZjM2ODc1YmQyMmZmZTE4ZjAiLCJuYW1lIjoiQWhtZWQgSXNtYWlsIiwiZW1haWwiOiJhaG1lZC5pc21haWxAdW5pZmkuY29tIiwiaWF0IjoxNjgzNTc4MDYzLCJleHAiOjE2ODM1ODE2NjN9.Ax-fPReYemgxfGcF7pUtIJ3Gv3EHfxCONUeT-md9OQI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"Hello World!\",\n    \"description\": \"This is unifi task\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{localhost}}/api/todo/",
+							"host": [
+								"{{localhost}}"
+							],
+							"path": [
+								"api",
+								"todo",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update todo",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDU5NTg3ZjM2ODc1YmQyMmZmZTE4ZjAiLCJuYW1lIjoiQWhtZWQgSXNtYWlsIiwiZW1haWwiOiJhaG1lZC5pc21haWxAdW5pZmkuY29tIiwiaWF0IjoxNjgzNTc4MDYzLCJleHAiOjE2ODM1ODE2NjN9.Ax-fPReYemgxfGcF7pUtIJ3Gv3EHfxCONUeT-md9OQI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"Hello World!\",\n    \"description\": \"This is unifi task Updated!\",\n    \"status\": false\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{localhost}}/api/todo/:id",
+							"host": [
+								"{{localhost}}"
+							],
+							"path": [
+								"api",
+								"todo",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "64595f6e53c95e2acdc793c9"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "localhost",
+			"value": "localhost:3000"
+		}
+	]
+}
